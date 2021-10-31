@@ -1,0 +1,63 @@
+{
+  "name": "coding-template",
+  "author": "saku",
+  "license": "MIT",
+  "browserslist": [
+    "last 2 versions",
+    "> 3% in JP"
+  ],
+  "scripts": {
+    "reinstall": "rm -rf node_modules && npm cache clean && yarn install",
+    "clean": "rm -rf ./static ./assets",
+    "lint:css": "stylelint --fix ./assets/css/*.css",
+    "dev": "npm run clean  && NODE_ENV=development webpack",
+    "watch": "npm run clean  && NODE_ENV=development webpack -w",
+    "build": "npm run clean && NODE_ENV=production webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "autoprefixer": "^10.3.7",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.27.5",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-declaration-sorter": "^6.1.3",
+    "css-loader": "^6.4.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-webpack-plugin": "^3.0.1",
+    "fibers": "^5.0.0",
+    "globule": "^1.3.3",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.0",
+    "imagemin-webp-webpack-plugin": "^3.3.6",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^2.4.2",
+    "postcss": "^8.3.9",
+    "postcss-loader": "^6.1.1",
+    "postcss-sort-media-queries": "^4.1.0",
+    "prettier": "^2.4.1",
+    "pug-html-loader": "^1.1.5",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended-scss": "^4.3.0",
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-scss": "^3.21.0",
+    "stylelint-webpack-plugin": "^3.0.1",
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "core-js": "3",
+    "regenerator-runtime": "^0.13.9"
+  }
+}
