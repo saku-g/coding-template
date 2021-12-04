@@ -1,0 +1,25 @@
+// ----------------------------------------
+// CSS変数
+// ----------------------------------------
+
+:root {
+  --color-primary: #4ca07b;
+  --color-primary-light: #eff5f2;
+  --color-primary-dark: #4f6159;
+  --color-accent: #e96953;
+  --color-bg: #f2f5f2;
+  --color-text: #1f372d;
+  --color-link: #3a89d8;
+  --color-border: #e2e4e3;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-rgb-black: 0, 0, 0;
+  --z-index-default: 0;
+  --z-index-header: 5;
+  --z-index-overlay-search: 10;
+  --z-index-search-form: 15;
+  --z-index-search-icon: 20;
+  --z-index-overlay-hamburger: 25;
+  --z-index-drawer-open: 30;
+  --font-base: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+}

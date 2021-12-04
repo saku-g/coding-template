@@ -1,4 +1,7 @@
-//
+// ----------------------------------------
+// @forward style.scss
+// ----------------------------------------
 
-// @forward 'variables';
-// @forward 'mixin';
+@forward 'functions';
+@forward 'mixins';
+@forward 'variables';

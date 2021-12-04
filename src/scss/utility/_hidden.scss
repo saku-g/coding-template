@@ -1,0 +1,21 @@
+// ----------------------------------------
+// hidden（表示・非表示）
+// ----------------------------------------
+
+@use '../global/' as g;
+
+.u-hidden-sm {
+  display: none;
+
+  @include g.mq(sm) {
+    display: block;
+  }
+}
+
+.u-hidden-lg {
+  display: block;
+
+  @include g.mq(lg) {
+    display: none;
+  }
+}

@@ -1,2 +1,7 @@
-// @forward 'variables';
-// @forward 'mixin';
+// ----------------------------------------
+// @forward style.scss
+// ----------------------------------------
+
+@forward 'header';
+@forward 'main';
+@forward 'footer';

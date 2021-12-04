@@ -1,0 +1,16 @@
+// ----------------------------------------
+// イージングの指定
+// ----------------------------------------
+
+@use 'sass:map';
+@use '../variables/easings' as *;
+
+@function ease($easing) {
+  @if map.has-key($easings, $easing) {
+    @return map.get($easings, $easing);
+  }
+
+  // 定義されていないイージングが指定された時は警告を出して初期値のeaseを返す
+  @warn 'イージング"#{$easing}"は定義されていません';
+  @return ease;
+}

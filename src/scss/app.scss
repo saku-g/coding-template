@@ -1,9 +1,8 @@
 // ----------------------------------------
-// footer
+// Import
 // ----------------------------------------
 
-@use '../global/' as g;
-
-.l-footer {
-  width: 100%;
-}
+@use 'foundation';
+@use 'layout';
+@use 'component';
+@use 'utility';

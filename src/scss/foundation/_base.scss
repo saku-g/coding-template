@@ -1,30 +1,25 @@
-// // ----------------------------------------
-// // タグのみに指定
-// // ----------------------------------------
+// ----------------------------------------
+// base
+// - 基本的なスタイル・タグのみ指定
+// ----------------------------------------
 
-// html {
-//   height: 100%;
-//   line-height: 1.7;
-// }
+body {
+  position: relative;
+  // color: g.$cl-txt;
+  // font-family: g.$font-family;
+  letter-spacing: 0.05em;
+  word-break: break-all;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
 
-// body {
-//   position: relative;
-//   color: g.$cl-txt;
-//   font-family: g.$font-family;
-//   letter-spacing: 0.05em;
-//   word-break: break-all;
-//   -webkit-font-smoothing: antialiased;
-//   -webkit-text-size-adjust: 100%;
-// }
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
 
-// a {
-//   text-decoration: none;
-//   transition: color 0.1s 0s ease;
-//   cursor: pointer;
-// }
-
-// img {
-//   max-width: 100%;
-//   height: auto;
-//   vertical-align: bottom;
-// }
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}

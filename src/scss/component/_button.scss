@@ -1,0 +1,14 @@
+// ----------------------------------------
+// button
+// ----------------------------------------
+
+@use '../global' as g;
+
+.button {
+  appearance: none;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+}

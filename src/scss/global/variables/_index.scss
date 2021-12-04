@@ -1,9 +1,7 @@
 // ----------------------------------------
-// footer
+// @forward global
 // ----------------------------------------
 
-@use '../global/' as g;
-
-.l-footer {
-  width: 100%;
-}
+@forward 'breakpoints';
+@forward 'css-variables';
+@forward 'easings';
