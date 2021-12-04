@@ -4,10 +4,11 @@
   "license": "MIT",
   "browserslist": [
     "last 2 versions",
-    "> 3% in JP"
+    "> 1% in JP",
+    "not IE 11"
   ],
   "scripts": {
-    "reinstall": "rm -rf node_modules && npm cache clean && yarn install",
+    "reinstall": "rm -rf node_modules && npm cache clean --force && yarn install",
     "clean": "rm -rf ./static ./assets",
     "lint:css": "stylelint --fix ./assets/css/*.css",
     "dev": "npm run clean  && NODE_ENV=development webpack",

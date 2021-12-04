@@ -17,6 +17,7 @@ node_modules/
 
 # generate
 dist
+assets
 
 # Mac OSX
 .DS_Store
