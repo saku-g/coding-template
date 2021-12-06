@@ -13,7 +13,7 @@
       @media (max-width: #{$width}) {
         @content;
       }
-    } @else if($type == min) {
+    } @else if ($type == min) {
       @media (min-width: #{inspect(map.get($breakpoints, $breakpoint))}) {
         @content;
       }

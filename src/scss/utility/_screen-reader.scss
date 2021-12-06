@@ -4,8 +4,8 @@
 
 .u-screen-reader {
   position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
   width: 1px;
   height: 1px;
   overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
