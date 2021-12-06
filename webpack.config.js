@@ -78,11 +78,11 @@ const config = {
     ],
   },
   plugins: [
-    new ESLintPlugin({
-      fix: true,
-    }),
     new MiniCssExtractPlugin({
       filename: './css/[name].css',
+    }),
+    new ESLintPlugin({
+      fix: true,
     }),
     new BrowserSyncPlugin({
       host: 'localhost',
