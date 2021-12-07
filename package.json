@@ -8,12 +8,13 @@
     "not IE 11"
   ],
   "scripts": {
-    "reinstall": "rm -rf node_modules && npm cache clean --force && yarn install",
+    "reinstall": "rm -rf node_modules && yarn cache clean && yarn install",
     "clean": "rm -rf ./static ./assets",
     "lint:css": "stylelint --fix **/*.{css,scss}",
     "dev": "npm run clean  && NODE_ENV=development webpack",
     "watch": "npm run clean  && NODE_ENV=development webpack -w",
-    "build": "npm run clean && NODE_ENV=production webpack"
+    "build": "npm run clean && NODE_ENV=production webpack",
+    "format": "npm run clean && NODE_ENV=production webpack && npm run lint:css"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
