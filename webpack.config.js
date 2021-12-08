@@ -1,7 +1,8 @@
 const path = require('path');
 const globule = require('globule');
-const ESLintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -80,6 +81,10 @@ const config = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: './css/[name].css',
+    }),
+    new StylelintPlugin({
+      configFile: path.resolve(__dirname, '.stylelintrc.js'),
+      fix: true,
     }),
     new ESLintPlugin({
       fix: true,
