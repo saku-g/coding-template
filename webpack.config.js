@@ -16,6 +16,23 @@ const dir = {
   dist: 'assets',
 };
 
+// BrowserSync共通設定
+const browserSyncConfig = {
+  host: 'localhost',
+  port: 3000,
+  open: 'external',
+};
+
+// pug or phpで条件分岐
+if (process.env.NODE_ENV === 'server') {
+  // php
+  browserSyncConfig.proxy = 'http://mywordpress.local';
+} else {
+  // pug(html)
+  browserSyncConfig.server = { baseDir: ['./'] };
+  browserSyncConfig.startPath = '/static/';
+}
+
 const config = {
   mode: MODE,
   entry: {
@@ -89,16 +106,7 @@ const config = {
     new ESLintPlugin({
       fix: true,
     }),
-    new BrowserSyncPlugin({
-      host: 'localhost',
-      port: 3000,
-      open: 'external',
-      /* pug */
-      server: { baseDir: ['./'] },
-      startPath: '/static/',
-      /* php */
-      // proxy: 'http://mywordpress.local',
-    }),
+    new BrowserSyncPlugin(browserSyncConfig),
     new CopyWebpackPlugin({
       patterns: [
         {

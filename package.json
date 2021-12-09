@@ -10,9 +10,11 @@
   "scripts": {
     "reinstall": "rm -rf node_modules && yarn cache clean && yarn install",
     "clean": "rm -rf ./static ./assets",
+    "clean:assets": "rm -rf ./assets",
     "lint:css": "stylelint --fix **/*.{css,scss}",
     "dev": "npm run clean  && NODE_ENV=development webpack",
     "watch": "npm run clean  && NODE_ENV=development webpack -w",
+    "server": "npm run clean:assets  && NODE_ENV=server webpack -w",
     "build": "npm run clean && NODE_ENV=production webpack",
     "format": "npm run build && npm run lint:css"
   },
