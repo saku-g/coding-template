@@ -8,13 +8,12 @@
     "not IE 11"
   ],
   "scripts": {
-    "reinstall": "rm -rf node_modules && yarn cache clean && yarn install",
-    "clean": "rm -rf ./static ./assets",
-    "clean:assets": "rm -rf ./assets",
+    "reinstall": "rimraf node_modules && yarn cache clean && yarn install",
+    "clean": "rimraf ./static ./assets",
     "lint:css": "stylelint --fix **/*.{css,scss}",
-    "dev": "npm run clean  && NODE_ENV=development webpack",
-    "watch": "npm run clean  && NODE_ENV=development webpack -w",
-    "server": "npm run clean:assets  && NODE_ENV=server webpack -w",
+    "dev": "npm run clean && NODE_ENV=development webpack",
+    "static": "npm run clean && NODE_KEY=static NODE_ENV=development webpack -w",
+    "server": "rimraf ./assets && NODE_KEY=server NODE_ENV=development webpack -w",
     "build": "npm run clean && NODE_ENV=production webpack",
     "format": "npm run build && npm run lint:css"
   },
@@ -50,6 +49,7 @@
     "postcss-sort-media-queries": "^4.1.0",
     "prettier": "^2.5.1",
     "pug-html-loader": "^1.1.5",
+    "rimraf": "^3.0.2",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
     "stylelint": "^14.1.0",

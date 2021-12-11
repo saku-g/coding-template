@@ -24,13 +24,13 @@ const browserSyncConfig = {
 };
 
 // pug or phpで条件分岐
-if (process.env.NODE_ENV === 'server') {
-  // php
-  browserSyncConfig.proxy = 'http://mywordpress.local';
-} else {
+if (process.env.NODE_KEY === 'static') {
   // pug(html)
   browserSyncConfig.server = { baseDir: ['./'] };
   browserSyncConfig.startPath = '/static/';
+} else if (process.env.NODE_KEY === 'server') {
+  // php
+  browserSyncConfig.proxy = 'http://mywordpress.local';
 }
 
 const config = {
